@@ -36,13 +36,10 @@ public class RegisterConfirmServlet extends HttpServlet {
 		String mail = request.getParameter("email");
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
-	    String gradeStr = request.getParameter("grade");
-	    String department = request.getParameter("gakka");
 	    
-	    int grade = Integer.parseInt(gradeStr);
 		
 		
-		Account account = new Account(-1, mail,pw,name,  grade,  department, null, null);
+		Account account = new Account(-1, mail,pw,name,  null, null);
 		
 		// セッションスコープのインスタンス取得
 		HttpSession session = request.getSession();

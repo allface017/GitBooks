@@ -1,14 +1,12 @@
 package dto;
 public class Library {
 	String name;
-	int isbn;
 	String author;
 	String publisher;
 	
-	public Library(String name,  int isbn,  String author ,String publisher) {
+	public Library(String name,   String author ,String publisher) {
 		super();
 		this.name = name;
-		this.isbn = isbn;
 		this.author = author;
 		this.publisher = publisher;
 	}
@@ -20,12 +18,7 @@ public class Library {
 		this.name = name;
 	}
 	
-	public int getIsbn() {
-		return isbn;
-	}
-	public void setIsbn(int isbn) {
-		this.isbn = isbn;
-	}
+	
 	public String getAuthor() {
 		return author;
 	}

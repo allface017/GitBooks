@@ -33,7 +33,7 @@ public class LibraryDAO {
 		
 		// 返却用変数
 		List<Library> result = new ArrayList<>();
-		String sql = "SELECT * FROM books";
+		String sql = "SELECT * FROM git_book";
 		
 		try (
 				Connection con =getConnection();
@@ -44,8 +44,7 @@ public class LibraryDAO {
 					String name = rs.getString("name");
 					String author = rs.getString("author");
 					String publisher = rs.getString("publisher");
-					int isbn = rs.getInt("isbn");
-					Library books = new Library(name,  isbn, publisher,author);
+					Library books = new Library(name, publisher,author);
 					
 					result.add(books);
 				}
@@ -64,7 +63,7 @@ public class LibraryDAO {
 	// 引数の Student インスタンスを元にデータを1件INSERTするメソッド
 	public static int registerLibrary(Library books) {
 		
-		String sql = "INSERT INTO books VALUES( default,?, ?, ?, ?)";
+		String sql = "INSERT INTO git_book VALUES( default,?, ?, ?)";
 		// return用の変数
 		int result = 0;
 		
@@ -75,7 +74,6 @@ public class LibraryDAO {
 			pstmt.setString(1, books.getName());
 			pstmt.setString(2, books.getAuthor());
 			pstmt.setString(3, books.getPublisher());
-			pstmt.setInt(4, books.getIsbn());
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -93,7 +91,7 @@ public static List<Library> Search(String keyword) {
 		
 		// 返却用変数
 		List<Library> result = new ArrayList<>();
-		String sql = "SELECT * FROM books WHERE name LIKE ? ";
+		String sql = "SELECT * FROM git_book WHERE name LIKE ? ";
 		
 		try (
 				Connection con =getConnection();
@@ -106,8 +104,7 @@ public static List<Library> Search(String keyword) {
 					String name1 = rs.getString("name");
 					String author1 = rs.getString("author");
 					String publisher1 = rs.getString("publisher");
-					int isbn = rs.getInt("isbn");
-					Library books = new Library(name1,  isbn, publisher1,author1);
+					Library books = new Library(name1, publisher1,author1);
 					
 					result.add(books);
 				}
@@ -123,7 +120,7 @@ public static List<Library> Search(String keyword) {
 	}
 public static int DeleteBooks(String name) {
 	
-	String sql = " DELETE FROM books WHERE name = ?";
+	String sql = " DELETE FROM git_book WHERE name = ?";
 
 	// return用の変数
 	int result = 0;

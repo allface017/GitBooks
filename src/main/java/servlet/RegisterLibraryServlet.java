@@ -38,13 +38,11 @@ public class RegisterLibraryServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String author = request.getParameter("author");
 		String publisher = request.getParameter("publisher");
-		String isbnStr = request.getParameter("isbn");
+	
 		
-		// 適宜、値の変換
-		int isbn = Integer.parseInt(isbnStr);
 		
 		// 入力された情報を元にインスタンスを生成
-		Library library = new Library( name, isbn,author,publisher);
+		Library library = new Library( name,author,publisher);
 		
 		// SQL実行
 		int result = LibraryDAO.registerLibrary(library);

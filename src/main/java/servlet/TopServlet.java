@@ -43,11 +43,19 @@ public class TopServlet extends HttpServlet {
 			dispatcher.forward(request, response);
 			return;
 		}
+		String mail = account.getMail();
+		System.out.println(mail);
+		if(mail.equals("p@o")) {
+			String view = "WEB-INF/view/admin-menu.jsp";
+			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
+			dispatcher.forward(request, response);
+		}else {
 		
 		// 正常な画面を表示
 		String view = "WEB-INF/view/menu.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);
+		}
 	}
 
 	/**

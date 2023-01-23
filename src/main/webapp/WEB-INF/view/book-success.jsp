@@ -14,14 +14,11 @@
 	String name = request.getParameter("name");
 	String author = request.getParameter("author");
 	String publisher = request.getParameter("publisher");
-	String isbnStr = request.getParameter("isbn");
-	int isbn = Integer.parseInt(isbnStr);
 	%>
 	<p>図書名:<%=name %></p>
 	<p>著者名:<%=author %></p>
 	<p>出版社:<%=publisher %></p>
-	<p>ISBN:<%=isbn %></p>
 	<a href = "SelectAllLibraryServlet">一覧画面へ</a>
-	<a href="./">戻る</a>
+	<a href="TopServlet">戻る</a>
 </body>
 </html>

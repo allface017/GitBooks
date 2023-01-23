@@ -13,7 +13,6 @@
 		図書名：<input type="text" name="name"><br>
 		著者：<input type="text" name="author"><br>
 		出版社：<input type="text" name="publisher"><br>
-		ISBN：<input type="number" name="isbn"><br>
 		<input type="submit" value="登録">
 	</form>
 </body>
