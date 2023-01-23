@@ -20,13 +20,7 @@
 			メール：<input type="email" name="email" value="<%=ac.getMail()%>"><br>
 			パスワード：<input type="password" name="pw"><br>
 			名前：<input type="text" name="name" value="<%=ac.getName()%>"><br>
-			学年：<input type="number" name="grade" value="<%=ac.getGrade()%>"><br>
-			学科：<br>
-				<input type="radio"name="gakka"value="情報システム科">情報システム科<br>
-				<input type="radio"name="gakka"value="総合システム工学科">総合システム工学科<br>
-				<input type="radio"name="gakka"value="ネットワークシステム科">ネットワークシステム科<br>
-				<input type="radio"name="gakka"value="高度情報工学科">高度情報工学科<br>
-				<input type="submit" value="登録">
+			<input type="submit" value="登録">
 		</form>
 	<%
 		} else {
@@ -36,12 +30,6 @@
 		メール：<input type="email" name="email"><br>
 		パスワード：<input type="password" name="pw"><br>
 		名前：<input type="text" name="name"><br>
-		学年：<input type="number" name="grade" ><br>
-		学科：<br>
-		<input type="radio"name="gakka"value="情報システム科">情報システム科<br>
-		<input type="radio"name="gakka"value="総合システム工学科">総合システム工学科<br>
-		<input type="radio"name="gakka"value="ネットワークシステム科">ネットワークシステム科<br>
-		<input type="radio"name="gakka"value="高度情報工学科">高度情報工学科<br>
 		<input type="submit" value="登録">
 	</form>
 	<%

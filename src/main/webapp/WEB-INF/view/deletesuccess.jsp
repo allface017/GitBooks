@@ -8,5 +8,6 @@
 </head>
 <body>
      <p>削除したよ</p>
+     <a href="TopServlet">戻る</a>
 </body>
 </html>

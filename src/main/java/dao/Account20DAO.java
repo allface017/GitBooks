@@ -30,7 +30,7 @@ public class Account20DAO {
 	}
 	
 	public static int registerAccount(Account account18) {
-		String sql = "INSERT INTO account18 VALUES(default, ?, ?, ?, ?, ?,?,current_timestamp)";
+		String sql = "INSERT INTO git_account VALUES(default, ?, ?, ?, ?)";
 		int result = 0;
 		
 		// ランダムなソルトの取得(今回は32桁で実装)
@@ -46,9 +46,7 @@ public class Account20DAO {
 			pstmt.setString(1, account18.getMail());
 			pstmt.setString(2, hashedPw);
 			pstmt.setString(3, account18.getName());
-			pstmt.setInt(4, account18.getGrade());
-			pstmt.setString(5, account18.getDepartment());
-			pstmt.setString(6, salt);
+			pstmt.setString(4, salt);
 
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -63,7 +61,7 @@ public class Account20DAO {
 	
 	// メールアドレスを元にソルトを取得
 	public static String getSalt(String mail) {
-		String sql = "SELECT salt FROM account18 WHERE mail = ?";
+		String sql = "SELECT salt FROM git_account WHERE mail = ?";
 		
 		try (
 				Connection con = getConnection();
@@ -88,7 +86,7 @@ public class Account20DAO {
 	
 	// ログイン処理
 	public static Account login(String mail, String hashedPw) {
-		String sql = "SELECT * FROM account18 WHERE mail = ? AND password = ?";
+		String sql = "SELECT * FROM git_account WHERE mail = ? AND password = ?";
 		
 		try (
 				Connection con = getConnection();
@@ -103,12 +101,9 @@ public class Account20DAO {
 					int id = rs.getInt("id");
 					String mail1 = rs.getString("mail");
 					String name = rs.getString("name");
-					int grade = rs.getInt("grade");
-					String department = rs.getString("department");
 					String salt = rs.getString("salt");
-					String createdAt = rs.getString("created_at");
 					
-					return new Account(id, mail1,null,name,grade,  department, salt, null);
+					return new Account(id, mail1,null,name, salt,null);
 				}
 			}
 		} catch (SQLException e) {

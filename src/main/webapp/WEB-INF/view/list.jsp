@@ -17,7 +17,7 @@
 			<th>図書名</th>
 			<th>著者名</th>
 			<th>出版社名</th>
-			<th>ISBN</th>
+			
 		</tr>
 	<%
 	List<Library> list = (ArrayList<Library>)request.getAttribute("list");
@@ -27,11 +27,10 @@
 			<td><%=s.getName() %></td>
 			<td><%=s.getAuthor() %></td>
 			<td><%=s.getPublisher() %></td>
-			<td><%=s.getIsbn() %></td>
 		</tr>
 	<%} %>
 	</table>
 	<a href = "RegisterFormServlet">登録画面へ</a>
-	<a href="./">戻る</a>
+	<a href="TopServlet">戻る</a>
 </body>
 </html>
