@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="../css/FromConfirm.css" rel="stylesheet">
 <title>Insert title here</title>
 </head>
 <body>
