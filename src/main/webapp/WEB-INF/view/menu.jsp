@@ -13,7 +13,7 @@
 	<%
 	Account lib = (Account)session.getAttribute("user");
 	%>
-	<h3>おっすユーザー</h3>
+	<h1>おっすユーザー</h1>
 	<p>ようこそ<%=lib.getName() %>さん</p>
 	<a href="SelectAllLibraryServlet">登録図書一覧</a><br>
 	<a href="LogoutServlet">ログアウト</a>
