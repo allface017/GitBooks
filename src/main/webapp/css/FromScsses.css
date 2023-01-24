@@ -1,11 +1,9 @@
 @charset "UTF-8";
-body {
-  font-family: serif;
-  text-align: center;
-      min-height: 100vh;
+body{
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
- background-color:#d50000;
+ background-color:blue;
   background-image: 
     linear-gradient( 
       90deg, 
@@ -27,34 +25,31 @@ body {
       transparent 200px
     );
   background-size: 100%;
-
+  animation: move 10s infinite both;
+  text-align: center;
 }
 
-.quizzes-container {
-  width: 400px;
-  margin: 50px auto;
+ h1,a {
+  color: white;
+  font-weight: 500;
+    font-size: 100px;
 }
 
-.quiz-container {
-  border-bottom:1px solid black;
-  padding-bottom: 20px;
-}
 
-.btn {
-  margin-top: 20px;
-  font-family: serif;
-  background-color: white;
+@keyframes move{
+  0% {
+    --lpos: 0%;
+  }
+  25% {
+    --lpos: 75%;
+  }
+  50% {
+    --lpos: 50%;
+  }
+  75% {
+    --lpos: 25%;
+  }
+  100% {
+    --lpos: 100%;
+  }
 }
-
-#score-container {
-  border: 1px solid black;
-  height: 50px;
-}
-
-.btn-score {
-  display: block;
-  margin: 20px auto;
-  font-family: serif;
-  background-color: white;
-}
-
