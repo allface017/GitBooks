@@ -4,8 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="css/kumakuma.css">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>管理者メニュー</title>
 </head>
 <body>
 <%Account lib = (Account)session.getAttribute("user");%>
