@@ -6,8 +6,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../css/BooksMenu.css">
-<title>Insert title here</title>
+<link rel="stylesheet" href="css/BooksMenu.css">
+<title>ユーザー</title>
 </head>
 <body>
 	<%
