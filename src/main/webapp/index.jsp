@@ -27,9 +27,11 @@ form h1,form p {
 }
 
 form p {
-  font-size: 10px;
+  font-size: 15px;
 }
-
+from a{
+  font-size: 40px;
+}
 form input[type = "text"],form input[type = "password"] {
   border: 0;
   background: none;
@@ -80,8 +82,8 @@ form input[type = "submit"]:hover {
 		request.setCharacterEncoding("UTF-8");
 		if(request.getParameter("error") != null){	
 	%>
-		<p style="color:red">ログイン失敗</p>
 	<form action="LoginServlet" method="post">
+		<p style="color:red">ログイン失敗</p>
 		<p>【IDとPWを入力してください。】<p><br>
 		<p>ログインID：<p><input type="text" name="mail" value="<%=request.getParameter("mail") %>"><br>
 		<p>PW：<p><input type="password" name="pw"><br>
