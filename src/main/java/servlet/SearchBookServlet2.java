@@ -34,17 +34,10 @@ public class SearchBookServlet2 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		String name=request.getParameter("name");
-		LibraryDAO.DeleteBooks(name);
+		List<Library> libraryList = LibraryDAO.Search(name);
 		
-		List<Library> searchProductList = LibraryDAO.Search(name);
-
-
-
-
-
-
-
-
+		// 取得したリストをリクエストスコープに保管(JSPに渡すため)
+		request.setAttribute("list", libraryList);
 		
 		String view = "WEB-INF/view/search2.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
