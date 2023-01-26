@@ -15,5 +15,6 @@
 		出版社：<input type="text" name="publisher"><br>
 		<input type="submit" value="登録">
 	</form>
+		<a href="TopServlet">戻る</a>
 </body>
 </html>

@@ -35,5 +35,6 @@
 		名前：<input type="text" name="name"><br>
 		<input type="submit" value="削除">
 	</form>
+		<a href="TopServlet">戻る</a>
 </body>
 </html>

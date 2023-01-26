@@ -12,5 +12,6 @@
 	<input type="text" name="name">
 	<input type="submit">
 	</form>
+		<a href="TopServlet">戻る</a>
 </body>
 </html>
