@@ -14,24 +14,24 @@
 	
 	<table border="1">
 		<tr>
-			<th>図書名</th>
-			<th>著者名</th>
-			<th>出版社名</th>
+			<th><p>図書名</p></th>
+			<th><p>著者名</p></th>
+			<th><p>出版社名</p></th>
 		</tr>
 	<%
 	List<Library> list = (ArrayList<Library>)request.getAttribute("list");
 		 for(Library ee : list){
 	%>
 		<tr>
-			<td><%=ee.getName() %></td>
-			<td><%=ee.getAuthor() %></td>
-			<td><%=ee.getPublisher() %></td>
+			<td><p><%=ee.getName() %></p></td>
+			<td><p><%=ee.getAuthor() %></p></td>
+			<td><p><%=ee.getPublisher() %></p></td>
 		</tr>
 	<%
 		 }
 	%>
 	</table>
-	<a href = "RegisterFormServlet">登録画面へ</a>
+	<a href = "RegisterBookServlet">登録画面へ</a>
 	<a href="TopServlet">戻る</a>
 </body>
 </html>

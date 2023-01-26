@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<link rel="stylesheet" href="css/library.css">
+<title>検索フォーム</title>
 </head>
 <body>
-	検索したい本のnameを入力してください：
+	<p>検索したい図書名を入力してください：</p>
 	<form action="SearchBookServlet2" method="post">
 	<input type="text" name="name">
 	<input type="submit">
