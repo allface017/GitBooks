@@ -30,7 +30,7 @@
 		</tr>
 	<%} %>
 	</table>
-	<a href = "RegisterFormServlet">登録画面へ</a>
+	<a href = "RegisterBookServlet">登録画面へ</a>
 	<a href="TopServlet">戻る</a>
 </body>
 </html>
