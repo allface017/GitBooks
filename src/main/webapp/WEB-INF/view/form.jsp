@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/Form.css">
 
-<title>Insert title here</title>
+<title>新規登録</title>
 </head>
 <body>
 	<%

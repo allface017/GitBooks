@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>削除画面</title>
 </head>
 <body>
      <p>削除したよ</p>

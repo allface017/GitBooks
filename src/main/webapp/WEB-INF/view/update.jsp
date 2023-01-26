@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>更新</title>
 </head>
 <body>
 	<h3>ここは更新用の画面です。</h3>
