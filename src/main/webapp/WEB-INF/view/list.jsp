@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/library.css">
-<title>ヒロック</title>
+<title>一覧</title>
 </head>
 <body>
 	
