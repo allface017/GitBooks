@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="css/library.css">
 <title>削除画面</title>
 </head>
 <body>

@@ -14,9 +14,9 @@
 	
 	<table border="1">
 		<tr>
-			<th>図書名</th>
-			<th>著者名</th>
-			<th>出版社名</th>
+			<th><p>図書名</p></th>
+			<th><p>著者名</p></th>
+			<th><p>出版社名</p></th>
 			
 		</tr>
 	<%
@@ -24,9 +24,9 @@
 		for(Library s : list) {
 	%>
 		<tr>
-			<td><%=s.getName() %></td>
-			<td><%=s.getAuthor() %></td>
-			<td><%=s.getPublisher() %></td>
+			<td><p><%=s.getName() %></p></td>
+			<td><p><%=s.getAuthor() %></p></td>
+			<td><p><%=s.getPublisher() %></p></td>
 		</tr>
 	<%} %>
 	</table>
